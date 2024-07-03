@@ -35,7 +35,8 @@ def apply_prefixspan(data):
     
     # Lấy tất cả các pattern phổ biến
     all_patterns = ps.frequent(min_support)
-    sorted_patterns = sorted(all_patterns, key=lambda x: x[1], reverse=True)
+    # Sắp xếp giảm dần
+    sorted_patterns = sorted(all_patterns, key=lambda x: x[0], reverse=True)
     
     return sorted_patterns
 
